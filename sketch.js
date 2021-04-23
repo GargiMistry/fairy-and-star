@@ -1,5 +1,6 @@
 var starImg,bgImg;
 var star, starBody,f,fairy;
+var voice;
 
 //create variable for fairy sprite and fairyImg
 
@@ -13,12 +14,13 @@ function preload()
 	starImg = loadImage("images/starImage.png");
 	bgImg = loadImage("images/starNight.png");
 	f = loadAnimation("images/fairyImage1.png","images/fairyImage2.png");
+    voice = loadSound("sound/JoyMusic.mp3")
 	//load animation for fairy
 }
 
 function setup() {
 	createCanvas(800, 750);
-
+     
 	//write code to play fairyVoice sound
 
 	//create fairy sprite and add animation for fairy
@@ -45,6 +47,8 @@ function setup() {
 
 function draw() {
   background(bgImg);
+
+  voice.play();
 
   star.x= starBody.position.x 
   star.y= starBody.position.y 
